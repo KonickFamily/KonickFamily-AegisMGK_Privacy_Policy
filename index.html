@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — AegisMGK Technologies LLC</title>
+  <style>
+    :root {
+      --bg: #0a0d12;
+      --surface: #111620;
+      --surface-2: #181e2a;
+      --border: #1e2636;
+      --accent: #00c2ff;
+      --accent-dim: rgba(0,194,255,0.12);
+      --green: #00e5a0;
+      --text: #d4dae8;
+      --muted: #6b7a99;
+      --heading: #eef1f8;
+      --badge-bg: rgba(0,194,255,0.1);
+      --badge-text: #00c2ff;
+      --card-bg: #13192400;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── SITE HEADER ── */
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header .logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--heading);
+      letter-spacing: -0.01em;
+    }
+    .site-header .logo span { color: var(--accent); }
+    .site-header nav a {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-left: 1.5rem;
+    }
+    .site-header nav a:hover { color: var(--text); text-decoration: none; }
+
+    /* ── HERO ── */
+    .policy-hero {
+      background: linear-gradient(160deg, #0d1525 0%, #0a0d12 60%);
+      border-bottom: 1px solid var(--border);
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .policy-hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      color: var(--heading);
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+    .policy-hero > p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+    }
+    .highlight-box {
+      background: var(--accent-dim);
+      border: 1px solid rgba(0,194,255,0.25);
+      border-radius: 10px;
+      padding: 1.1rem 1.5rem;
+      text-align: left;
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+    }
+    .highlight-box p { font-size: 0.95rem; color: var(--text); }
+    .last-updated {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ── TOC BAR ── */
+    .toc-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      overflow-x: auto;
+      position: sticky;
+      top: 60px;
+      z-index: 90;
+    }
+    .toc-bar a {
+      color: var(--muted);
+      font-size: 0.82rem;
+      padding: 0.75rem 0.9rem;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .toc-bar a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ── LAYOUT ── */
+    .policy-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+    }
+
+    /* ── SECTION ── */
+    .policy-section {
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .policy-section:last-child { border-bottom: none; }
+
+    .section-badge {
+      display: inline-block;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 20px;
+      margin-bottom: 0.9rem;
+      border: 1px solid rgba(0,194,255,0.2);
+    }
+
+    .policy-section h2 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .policy-section h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--heading);
+      margin: 1.6rem 0 0.5rem;
+    }
+    .policy-section h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--heading);
+      margin-bottom: 0.5rem;
+    }
+    .policy-section p { margin-bottom: 0.85rem; font-size: 0.97rem; }
+    .policy-section ul {
+      padding-left: 1.4rem;
+      margin-bottom: 0.85rem;
+    }
+    .policy-section li {
+      font-size: 0.97rem;
+      margin-bottom: 0.4rem;
+    }
+
+    /* ── INFO GRID ── */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.2rem;
+    }
+    .info-card-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .info-card h4 { font-size: 0.9rem; margin-bottom: 0.3rem; }
+    .info-card p { font-size: 0.85rem; color: var(--muted); margin: 0; }
+
+    /* ── APP POLICY CARD ── */
+    .app-policy-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 1.8rem;
+      margin-top: 1.2rem;
+    }
+    .app-policy-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .app-policy-header h3 {
+      font-size: 1.05rem;
+      margin: 0 0 0.2rem;
+    }
+    .app-policy-header span {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ── NO-COLLECT BOX ── */
+    .no-collect {
+      background: rgba(0,229,160,0.07);
+      border: 1px solid rgba(0,229,160,0.2);
+      border-radius: 10px;
+      padding: 1.1rem 1.4rem;
+      margin-top: 1.2rem;
+    }
+    .no-collect h4 { color: var(--green); font-size: 0.9rem; margin-bottom: 0.5rem; }
+    .no-collect li { font-size: 0.9rem; color: var(--text); }
+
+    /* ── RIGHTS CARDS ── */
+    .rights-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.3rem;
+      margin-bottom: 0.8rem;
+    }
+    .rights-card h4 { color: var(--accent); font-size: 0.9rem; margin-bottom: 0.3rem; }
+    .rights-card p { font-size: 0.9rem; color: var(--muted); margin: 0; }
+
+    /* ── CONTACT BOX ── */
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 1.8rem;
+      margin-top: 1rem;
+    }
+    .contact-box h4 { color: var(--heading); font-size: 1rem; margin-bottom: 0.6rem; }
+    .contact-box p { font-size: 0.95rem; margin-bottom: 0.3rem; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .site-footer a { color: var(--muted); }
+    .site-footer a:hover { color: var(--accent); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .policy-hero { padding: 3rem 1.2rem 2rem; }
+      .policy-content { padding: 1rem 1.2rem 3rem; }
+      .toc-bar { top: 60px; }
+      .info-grid { grid-template-columns: 1fr 1fr; }
+      .site-header nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div class="logo">Aegis<span>MGK</span> Technologies</div>
+    <nav>
+      <a href="https://aegismgk.com">Home</a>
+      <a href="https://aegismgk.com/sbcc/">SBCC</a>
+      <a href="https://aegismgk.com/contact/">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <div class="policy-hero">
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p>AegisMGK Technologies LLC is committed to protecting your privacy across all our products and services.</p>
+    <div class="highlight-box">
+      <p><strong>Short version:</strong> We do not collect, sell, or share your personal data with anyone. iOS app data stays on your device and, if you choose, in your own private iCloud account. The SBCC web portal processes your assessment in real time and does not store your responses after your session ends. We never see your app data.</p>
+    </div>
+    <span class="last-updated">Effective Date: May 5, 2026 &nbsp;|&nbsp; Last Updated: June 1, 2026</span>
+  </div>
+
+  <!-- TABLE OF CONTENTS BAR -->
+  <div class="toc-bar">
+    <a href="#overview">Overview</a>
+    <a href="#what-we-collect">What We Collect</a>
+    <a href="#financial-tracker">Financial Tracker</a>
+    <a href="#widget-watch">Widget &amp; Watch</a>
+    <a href="#plant-schedule">Plant Schedule</a>
+    <a href="#aria">A.R.I.A.</a>
+    <a href="#coppa">Children's Privacy</a>
+    <a href="#security">Data Security</a>
+    <a href="#sbcc">SBCC Web Portal</a>
+    <a href="#consulting">Consulting</a>
+    <a href="#website">Website</a>
+    <a href="#your-rights">Your Rights</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="policy-content">
+
+    <!-- OVERVIEW -->
+    <div class="policy-section" id="overview">
+      <div class="section-badge">Overview</div>
+      <h2>Our Privacy Commitment</h2>
+      <p>AegisMGK Technologies LLC is a California-based cybersecurity consulting and mobile app development company. This Privacy Policy describes how we handle information in connection with our iOS applications, the SBCC web portal, and our consulting services. By using our applications or services, you agree to the practices described in this policy. This policy applies to users in the United States.</p>
+      <p>This policy applies to the following products and services:</p>
+      <ul>
+        <li><strong>Financial Payment Tracker</strong> — iOS / watchOS</li>
+        <li><strong>My Plant Watering Schedule</strong> — iOS</li>
+        <li><strong>A.R.I.A.</strong> — iOS (Always Reliable Internet Advisor)</li>
+        <li><strong>SBCC Web Portal</strong> — Small Business Compliance Checker at aegismgk.com/sbcc</li>
+        <li><strong>Cybersecurity Consulting Services</strong> — Professional Review, Full Consultation, Retainer</li>
+      </ul>
+      <p>We operate on a <strong>local-first, data-minimal philosophy</strong> — your iOS app data stays on your device wherever possible. The SBCC web portal processes your assessment in real time without storing your responses on our servers. We do not operate analytics pipelines, sell data, or use third-party advertising in any of our products.</p>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-card-icon">📱</div>
+          <h4>iOS Apps</h4>
+          <p>All app data stays on your device or your personal iCloud. We have zero server access to your data.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon">🔒</div>
+          <h4>No Tracking</h4>
+          <p>Our apps contain no analytics, advertising, or tracking frameworks of any kind.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon">📋</div>
+          <h4>SBCC Web Portal</h4>
+          <p>Assessment responses processed in real time. Not stored on our servers after your session ends.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon">🏢</div>
+          <h4>Consulting</h4>
+          <p>Client information shared during consulting engagements is held in strict confidence per our retention policy.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHAT WE COLLECT -->
+    <div class="policy-section" id="what-we-collect">
+      <div class="section-badge">Data Practices</div>
+      <h2>Information We Collect</h2>
+      <p>We do not operate analytics pipelines or advertising back-ends. The following explains what data exists, where it lives, and how it is used.</p>
+
+      <h3>Data You Enter Directly (iOS Apps)</h3>
+      <ul>
+        <li><strong>Financial Payment Tracker —</strong> Account nicknames, balances, credit limits, APR, payment and charge amounts, due dates, transaction memos, and payment history you manually enter.</li>
+        <li><strong>My Plant Watering Schedule —</strong> Plant names, species, locations, watering schedules, care history, optional plant photos, care notes, and an optional nickname.</li>
+        <li><strong>A.R.I.A. —</strong> A first name or nickname and a selected Cyber Identity title. All learning progress is stored on your device only and is never transmitted to AegisMGK Technologies or any third party.</li>
+      </ul>
+
+      <h3>Data You Enter (SBCC Web Portal)</h3>
+      <ul>
+        <li>Business name, business type, industry, state of operation, and employee count</li>
+        <li>Questionnaire responses (yes / no / not sure answers across compliance categories)</li>
+        <li>Your email address — only if you submit a free consultation request</li>
+      </ul>
+      <p>Web portal assessment responses are processed in real time to generate your PDF report and are <strong>not stored on our servers</strong> after your session ends. If you submit a consultation request, your email address and PDF report are transmitted to AegisMGK via encrypted email and retained per our record retention policy. See the <a href="#sbcc">SBCC Web Portal</a> section below for full details.</p>
+
+      <h3>Data Stored On Your Device (iOS Apps)</h3>
+      <p>All data for all three iOS apps is stored in a Core Data database on your device using Apple's standard SQLite store. For Financial Payment Tracker, sensitive authentication credentials are additionally stored in the iOS Keychain.</p>
+
+      <h3>Data You Optionally Sync via iCloud (iOS Apps)</h3>
+      <p>All three iOS apps offer optional iCloud Sync using Apple's CloudKit framework. This is entirely your choice. When enabled, data is encrypted in transit and at rest by Apple. AegisMGK Technologies does not have access to your iCloud data at any time. See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a> for details.</p>
+
+      <h3>App Update Check (My Plant Watering Schedule Only)</h3>
+      <p>Once per 24 hours, My Plant Watering Schedule silently contacts Apple's public iTunes Lookup API to check for a newer version. This request contains only the app's bundle identifier — no personal data is transmitted.</p>
+
+      <div class="no-collect">
+        <h4>Information We Do NOT Collect</h4>
+        <ul>
+          <li>Analytics, crash reports, or usage statistics in any product</li>
+          <li>Advertising identifiers (IDFA) or cross-app tracking</li>
+          <li>Your name, email address, phone number, or location (iOS apps)</li>
+          <li>Your financial data, plant data, or A.R.I.A. learning progress on our servers</li>
+          <li>SBCC assessment responses after your web portal session ends (free tier)</li>
+          <li>We do not sell, rent, lease, or share your data with any third party</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FINANCIAL PAYMENT TRACKER -->
+    <div class="policy-section" id="financial-tracker">
+      <div class="section-badge">iOS App</div>
+      <h2>Financial Payment Tracker</h2>
+      <p>Financial Payment Tracker is designed with your privacy as the top priority. All financial data you enter stays on your device and, if you choose, in your own personal iCloud account. We never see, collect, or have access to any of your data.</p>
+
+      <div class="app-policy-card">
+        <div class="app-policy-header">
+          <div>
+            <h3>Financial Payment Tracker</h3>
+            <span>Finance &bull; Productivity &bull; iOS / watchOS</span>
+          </div>
+        </div>
+
+        <h3>Data Stored On Your Device</h3>
+        <ul>
+          <li>Account nicknames and types (e.g. "Chase Sapphire", credit card)</li>
+          <li>Balances, credit limits, APR, minimum payment amounts, and due dates</li>
+          <li>Payment and charge amounts, transaction memos, and payment history you log manually</li>
+          <li>Savings goal names, categories, balances, and contribution history</li>
+          <li>App preferences (biometric lock setting, notification preferences)</li>
+        </ul>
+        <p>No account numbers, login credentials, or bank connection details are ever requested or stored.</p>
+
+        <h3>Face ID / Touch ID</h3>
+        <p>You may optionally enable a PIN lock secured by Face ID or Touch ID. Biometric data is processed entirely by Apple's Secure Enclave on your device and is never accessible to the app or to us. Your PIN is stored in the iOS Keychain, encrypted at the hardware level.</p>
+
+        <h3>Push Notifications</h3>
+        <p>If you grant notification permission, the app schedules local payment reminders using Apple's UNUserNotificationCenter framework. No data leaves your device to generate notifications. You can manage notifications at any time in <strong>Settings → Notifications</strong>.</p>
+
+        <h3>iCloud Sync &amp; Data Deletion</h3>
+        <p>If you use iCloud Sync and delete your data within the app, deletions are propagated to your iCloud account through Apple's CloudKit persistent history mechanism. To permanently delete all data before uninstalling, use the <strong>Delete All Data &amp; Account</strong> option in app Settings.</p>
+
+        <div class="no-collect">
+          <h4>We Do Not Collect</h4>
+          <ul>
+            <li>Analytics, crash reports, or usage data</li>
+            <li>Advertising or tracking framework data</li>
+            <li>Any data shared with third parties</li>
+            <li>Server-side data of any kind</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- WIDGET & WATCH -->
+    <div class="policy-section" id="widget-watch">
+      <div class="section-badge">iOS App — Financial Payment Tracker</div>
+      <h2>Home Screen Widget and Apple Watch</h2>
+      <p>Financial Payment Tracker includes a home screen widget and an Apple Watch companion app. These features display a summary of your upcoming payment due dates and balances.</p>
+
+      <h3>How Data Is Shared With the Widget and Watch App</h3>
+      <p>The widget and Watch app receive data through an <strong>App Group shared container</strong> — a secure, on-device storage area that allows the main app and its extensions to share data without any network communication. This data transfer happens entirely on your device and never leaves it.</p>
+
+      <h3>What Data Is Shared</h3>
+      <ul>
+        <li>Account nicknames and upcoming due dates for display in the widget</li>
+        <li>Minimum payment amounts and balances for the payoff summary view</li>
+        <li>No account numbers, credentials, or sensitive identifiers are included</li>
+      </ul>
+
+      <h3>Widget Cache</h3>
+      <p>The widget cache is stored in the App Group UserDefaults container. It is cleared automatically when you use <strong>Delete All Data &amp; Account</strong> in app Settings, and is never synced to iCloud or transmitted anywhere.</p>
+
+      <div class="no-collect">
+        <h4>Widget &amp; Watch Data Stays On-Device</h4>
+        <ul>
+          <li>All widget and Watch data is shared via on-device App Group container only</li>
+          <li>No widget or Watch data is transmitted to any server</li>
+          <li>No widget or Watch data is accessible to AegisMGK Technologies</li>
+          <li>Widget cache is cleared when you delete all app data</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PLANT WATERING SCHEDULE -->
+    <div class="policy-section" id="plant-schedule">
+      <div class="section-badge">iOS App</div>
+      <h2>My Plant Watering Schedule</h2>
+      <p>My Plant Watering Schedule is designed with your privacy as the top priority. All plant care data you enter stays on your device and, if you choose, in your own personal iCloud account. We never see, collect, or have access to any of your data.</p>
+
+      <div class="app-policy-card">
+        <div class="app-policy-header">
+          <div>
+            <h3>My Plant Watering Schedule</h3>
+            <span>Lifestyle &bull; Productivity &bull; iOS</span>
+          </div>
+        </div>
+
+        <h3>Data Stored On Your Device</h3>
+        <ul>
+          <li>Plant names, species, and personal notes</li>
+          <li>Care schedules (watering, fertilizing, and misting frequencies)</li>
+          <li>Care history logs (dates and notes for each care event)</li>
+          <li>Plant photos you optionally add from your camera or photo library</li>
+          <li>Locations you create to organize your plants (e.g., Living Room, Patio)</li>
+          <li>An optional nickname to personalize care reminder notifications</li>
+          <li>App preferences (active theme, notification settings)</li>
+        </ul>
+        <p>No account, login credentials, or personal identifying information is ever requested or required.</p>
+
+        <h3>Nickname</h3>
+        <p>During onboarding, you may optionally enter a nickname to personalize your care reminders. Your nickname is stored only on your device and is never transmitted to any server or seen by AegisMGK Technologies. You can change or remove it at any time in Settings.</p>
+
+        <h3>Camera and Photo Library</h3>
+        <p>If you add a photo to a plant profile, the app requests access to your camera or photo library only at the moment you tap the photo option. Photos are stored locally or, if iCloud sync is enabled, in your private iCloud account. Photos are never transmitted to us or any third-party server.</p>
+
+        <h3>App Update Check</h3>
+        <p>Once per 24 hours, the app silently contacts Apple's public iTunes Lookup API to check for a newer version. Only the app's bundle identifier is transmitted — no personal data.</p>
+
+        <h3>Push Notifications</h3>
+        <p>If you grant notification permission, the app schedules local plant care reminders on-device. Notification permission is requested only when you enable reminders in Settings — never automatically on first launch.</p>
+
+        <h3>iCloud Sync &amp; Data Deletion</h3>
+        <p>To permanently delete all data before uninstalling, use the <strong>Erase All Data</strong> option in app Settings.</p>
+
+        <div class="no-collect">
+          <h4>We Do Not Collect</h4>
+          <ul>
+            <li>Analytics, crash reports, or usage data</li>
+            <li>Advertising networks or tracking framework data</li>
+            <li>Any data shared with third parties</li>
+            <li>Server-side data of any kind</li>
+            <li>Account or registration information</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- A.R.I.A. -->
+    <div class="policy-section" id="aria">
+      <div class="section-badge">iOS App</div>
+      <h2>A.R.I.A. (Always Reliable Internet Advisor)</h2>
+      <p>A.R.I.A. is a gamified cybersecurity awareness app designed for general adult audiences. It operates entirely offline — no external AI services, no advertising networks, and no developer-operated servers are used at any time.</p>
+      <p>A.R.I.A. serves three adult audience types selected during onboarding: <strong>Seniors &amp; Retirees</strong>, <strong>Families</strong>, and <strong>Small Business Employees</strong>. The Families audience is intended for parents and guardians who want to learn how to protect their families online — content covering gaming platforms (Roblox, Minecraft, Fortnite, Discord) and household cybersecurity is written for the parent, not for children.</p>
+
+      <div class="app-policy-card">
+        <div class="app-policy-header">
+          <div>
+            <h3>A.R.I.A.</h3>
+            <span>Education &bull; Cybersecurity &bull; iOS &bull; Rated 4+</span>
+          </div>
+        </div>
+
+        <h3>Data Stored On Your Device</h3>
+        <ul>
+          <li>A first name or nickname and a chosen Cyber Identity title to personalize your experience</li>
+          <li>Learning progress — lessons completed, goals achieved, badges earned, points, and Cyber Rank</li>
+          <li>Audience type selected during onboarding (Seniors, Families, or Small Business)</li>
+        </ul>
+        <p>A.R.I.A. encourages all users to use a nickname rather than their real name as good cybersecurity practice.</p>
+
+        <h3>Push Notifications</h3>
+        <p>If you grant notification permission, A.R.I.A. may schedule local daily challenge reminders using Apple's UNUserNotificationCenter framework. All notifications are generated and delivered entirely on-device — no data leaves your device to generate them.</p>
+
+        <h3>iCloud Sync</h3>
+        <p>A.R.I.A. offers optional iCloud Sync to back up your learning progress to your personal iCloud account. This is entirely your choice — the app defaults to local-only storage. When enabled, data is encrypted in transit and at rest by Apple. AegisMGK has no access to your iCloud data.</p>
+
+        <h3>Data Deletion</h3>
+        <p>Go to <strong>Settings → Reset Game</strong> to permanently remove all progress. If iCloud Sync was enabled, the deletion propagates to your iCloud account.</p>
+
+        <div class="no-collect">
+          <h4>We Do Not Collect</h4>
+          <ul>
+            <li>Analytics, crash reports, or usage data</li>
+            <li>Advertising identifiers or tracking framework data</li>
+            <li>Any data shared with third parties or external servers</li>
+            <li>Real names, email addresses, phone numbers, or location data</li>
+            <li>A.R.I.A. makes no network calls — all content is bundled locally within the app</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHILDREN'S PRIVACY -->
+    <div class="policy-section" id="coppa">
+      <div class="section-badge">Children's Privacy</div>
+      <h2>Children's Privacy</h2>
+      <p>None of AegisMGK's iOS apps, the SBCC web portal, or our consulting services are directed at children under the age of 13. All products are designed for and marketed to adult users.</p>
+      <ul>
+        <li><strong>Financial Payment Tracker</strong> — personal finance management tool for adults</li>
+        <li><strong>My Plant Watering Schedule</strong> — household plant care tool for adults</li>
+        <li><strong>A.R.I.A.</strong> — cybersecurity education app for adults (rated 4+ in the Education category); the Families audience is parents learning to protect their families online, not children using the app</li>
+        <li><strong>SBCC Web Portal</strong> — small business compliance tool for business owners and operators</li>
+      </ul>
+      <p>We do not knowingly collect personal information from children under 13 through any of our products or services. If you believe a child has submitted personal information through any of our products, please contact us at <a href="mailto:admin@aegismgk.com">admin@aegismgk.com</a> and we will take prompt steps to remove it.</p>
+    </div>
+
+    <!-- DATA SECURITY -->
+    <div class="policy-section" id="security">
+      <div class="section-badge">Security</div>
+      <h2>Data Security</h2>
+      <p>We take the security of your data seriously. The following measures are in place across our products:</p>
+      <ul>
+        <li>Sensitive credentials (Apple User ID, app PIN) are stored in the iOS Keychain — hardware-encrypted, device-only, and excluded from unencrypted backups</li>
+        <li>Core Data stores use SQLite with iOS's default file protection (NSFileProtectionCompleteUntilFirstUserAuthentication)</li>
+        <li>iCloud data in transit is protected by TLS and encrypted at rest by Apple</li>
+        <li>None of our iOS apps connect to any developer-operated server, eliminating server-side breach risk entirely</li>
+        <li>A.R.I.A. makes no network calls — all content is bundled locally within the app, eliminating server-side breach risk</li>
+        <li>The SBCC web portal is served over HTTPS (TLS 1.2/1.3) via Cloudflare with CSRF protection on all form submissions</li>
+        <li>Consulting client documents are stored encrypted at rest on FileVault-protected local storage and are never placed in publicly accessible locations</li>
+      </ul>
+
+      <h3>Data Retention (iOS Apps)</h3>
+      <p>We do not retain your iOS app data. Your data exists only on your device and, optionally, in your own iCloud account. Deletion is immediate and permanent when you use the in-app deletion feature.</p>
+    </div>
+
+    <!-- SBCC WEB PORTAL -->
+    <div class="policy-section" id="sbcc">
+      <div class="section-badge">Web Portal</div>
+      <h2>SBCC Web Portal (aegismgk.com/sbcc)</h2>
+      <p>The Small Business Compliance Checker web portal is a browser-based compliance assessment tool available free of charge at <a href="https://aegismgk.com/sbcc/">aegismgk.com/sbcc</a>. It operates differently from our iOS apps — your assessment is processed on our web server rather than on your device.</p>
+
+      <h3>What the SBCC Web Portal Collects</h3>
+      <ul>
+        <li><strong>Business profile information:</strong> Business name, type, industry, state of operation, employee count, and whether you handle payments, health data, or serve children under 13.</li>
+        <li><strong>Questionnaire responses:</strong> Your yes / no / not sure answers across applicable compliance categories.</li>
+        <li><strong>Your email address:</strong> Only if you click <strong>Request Free Consult from AegisMGK</strong> and submit your contact request.</li>
+      </ul>
+
+      <h3>How Your Data Is Used</h3>
+      <ul>
+        <li>Your business profile and questionnaire responses are processed server-side in real time to calculate your risk scores and generate your PDF report.</li>
+        <li>Your assessment data is <strong>not stored in a database</strong> and is <strong>not retained on our servers</strong> after your session ends.</li>
+        <li>If you submit a consultation request, your email address and PDF report are transmitted to AegisMGK via encrypted email (Zoho Mail, TLS). We use your email only to respond to your request — we do not add you to any mailing list.</li>
+        <li>Server logs may record your IP address, browser type, and access timestamp for security and troubleshooting purposes only. These logs are not used for analytics or advertising.</li>
+      </ul>
+
+      <h3>Consultation Request Data Retention</h3>
+      <p>If you submit a consultation request, your email address and the attached PDF report are retained in our email archive for 3 years per our record retention policy. If you engage AegisMGK for paid consulting services, your engagement documents are retained for 3–5 years depending on document type. You may request deletion of your consultation request data at any time by contacting <a href="mailto:admin@aegismgk.com">admin@aegismgk.com</a>.</p>
+
+      <h3>CSRF Protection</h3>
+      <p>All SBCC web portal form submissions are protected by CSRF (Cross-Site Request Forgery) tokens, which are generated fresh for each browser session and verified server-side before any processing occurs.</p>
+
+      <h3>No Account Required</h3>
+      <p>The SBCC web portal does not require an account, login, or registration of any kind. No cookies are set for tracking or advertising purposes. The only cookie used is a session cookie required for CSRF security, which expires when you close your browser.</p>
+
+      <h3>Scope &amp; Limitations Notice</h3>
+      <p>SBCC assessment results are based entirely on self-reported responses and reflect general cybersecurity risk guidance. They do not constitute a formal compliance audit, legal opinion, or regulatory certification under any framework including HIPAA, PCI-DSS, CCPA, COPPA, or NIST. AegisMGK Technologies LLC is an independent cybersecurity consultant, not a licensed attorney or accredited compliance auditor. For full terms, see our <a href="https://aegismgk.com/sbcc-terms/">Terms of Service</a>.</p>
+
+      <div class="no-collect">
+        <h4>SBCC Web Portal — What We Do NOT Do</h4>
+        <ul>
+          <li>We do not store your assessment responses in a database after your session ends</li>
+          <li>We do not retain a copy of your PDF report unless you submit a consultation request</li>
+          <li>We do not use your business information for advertising or analytics</li>
+          <li>We do not share your assessment data with any third party</li>
+          <li>We do not set tracking cookies or use advertising networks</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CONSULTING -->
+    <div class="policy-section" id="consulting">
+      <div class="section-badge">Services</div>
+      <h2>Cybersecurity Consulting Services</h2>
+      <p>AegisMGK Technologies LLC provides independent cybersecurity consulting services including Consulting Letters, Professional Reviews, Full Consultations, and monthly Retainer engagements. When you engage us for paid services, we receive information about your business as part of the engagement.</p>
+
+      <h3>Information We Receive</h3>
+      <ul>
+        <li>Your SBCC assessment PDF report and underlying questionnaire responses</li>
+        <li>Business contact information (name, title, email, business name)</li>
+        <li>Any additional business context you share during a live consultation session</li>
+      </ul>
+
+      <h3>How We Handle Client Information</h3>
+      <p>All information shared during a consulting engagement is treated as <strong>strictly confidential</strong>. We do not share, sell, or disclose client information to any third party without your explicit written consent, except as required by law. Consulting documents are retained per our record retention schedule (3 years for Consulting Letters, 5 years for Professional Reviews and Full Consultations) and stored encrypted at rest.</p>
+
+      <h3>What Our Services Are and Are Not</h3>
+      <p>AegisMGK provides general cybersecurity risk guidance based on your self-reported assessment responses. Our deliverables do not constitute a formal compliance audit, legal opinion, or regulatory certification. We are independent cybersecurity consultants, not licensed attorneys or accredited compliance auditors. We are not affiliated with, endorsed by, or certified by any regulatory body or framework organization (NIST, PCI SSC, HHS, FTC, etc.).</p>
+
+      <h3>Engagement Agreement</h3>
+      <p>Paid consulting engagements are governed by our <a href="https://aegismgk.com/sbcc-terms/">Terms of Service</a> and a Client Engagement Agreement provided prior to work beginning.</p>
+    </div>
+
+    <!-- WEBSITE -->
+    <div class="policy-section" id="website">
+      <div class="section-badge">Website</div>
+      <h2>This Website (aegismgk.com)</h2>
+
+      <h3>Contact Form</h3>
+      <p>When you submit our contact form, we collect your name, email address, subject, and message. This information is used solely to respond to your inquiry. We do not add you to mailing lists, share your information with third parties, or use it for marketing purposes without your explicit consent.</p>
+
+      <h3>Cloudflare</h3>
+      <p>This website is protected and accelerated by Cloudflare. Cloudflare may process request metadata (such as IP addresses) for security and performance purposes in accordance with <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare's Privacy Policy</a>.</p>
+
+      <h3>No Analytics or Tracking</h3>
+      <p>We do not use Google Analytics, Facebook Pixel, or any other third-party analytics or advertising tracking on this website. No cookies are set for tracking or advertising purposes.</p>
+
+      <h3>SSL Encryption</h3>
+      <p>All data transmitted between your browser and this website is encrypted using TLS (HTTPS). We enforce HTTPS-only access via Cloudflare Full (Strict) mode.</p>
+    </div>
+
+    <!-- YOUR RIGHTS -->
+    <div class="policy-section" id="your-rights">
+      <div class="section-badge">Your Rights</div>
+      <h2>Your Privacy Rights</h2>
+
+      <h3>California Residents (CalOPPA / CCPA)</h3>
+      <div class="rights-card">
+        <h4>Right to Know</h4>
+        <p>You may request information about the categories and specific pieces of personal data we hold about you. For iOS app users, we hold no data on our servers — it is on your device. For SBCC consultation request submitters, we hold your email address and PDF report per our retention schedule.</p>
+      </div>
+      <div class="rights-card">
+        <h4>Right to Delete</h4>
+        <p>iOS app users can delete all data using the in-app deletion option in Settings. SBCC web portal users may request deletion of consultation request data by emailing <a href="mailto:admin@aegismgk.com">admin@aegismgk.com</a>.</p>
+      </div>
+      <div class="rights-card">
+        <h4>Right to Correct</h4>
+        <p>You may request correction of inaccurate personal information we hold. Contact us at the email below.</p>
+      </div>
+      <div class="rights-card">
+        <h4>Right to Opt-Out of Sale</h4>
+        <p>We do not sell personal information. There is nothing to opt out of.</p>
+      </div>
+      <div class="rights-card">
+        <h4>Non-Discrimination</h4>
+        <p>We will not discriminate against you for exercising any of your privacy rights.</p>
+      </div>
+
+      <h3>Residents of Other States</h3>
+      <p>AegisMGK Technologies, LLC is a California LLC and California law governs our operations. If you are a resident of another state that has enacted a consumer privacy law, you may have additional rights under your state's law. We extend the same data access, correction, deletion, and opt-out rights described above to all users regardless of location. To exercise any privacy right, contact us at <a href="mailto:admin@aegismgk.com">admin@aegismgk.com</a>.</p>
+
+      <h3>Changes to This Policy</h3>
+      <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last Updated" date at the top of this page. Continued use of our apps or services after a policy change constitutes acceptance of the updated policy.</p>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="policy-section" id="contact">
+      <div class="section-badge">Contact</div>
+      <h2>Privacy Contact</h2>
+      <p>If you have questions, concerns, or requests regarding this privacy policy or your personal data — including SBCC consultation data deletion requests or any privacy rights requests — please contact us:</p>
+      <div class="contact-box">
+        <h4>AegisMGK Technologies LLC</h4>
+        <p>Corona, California, USA</p>
+        <p>Email: <a href="mailto:admin@aegismgk.com">admin@aegismgk.com</a></p>
+        <p>Website: <a href="https://aegismgk.com">aegismgk.com</a></p>
+        <p style="margin-top:0.8rem;font-size:0.85rem;color:var(--muted)">We aim to respond to all privacy inquiries within 5 business days.</p>
+      </div>
+    </div>
+
+  </div><!-- .policy-content -->
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2026 AegisMGK Technologies LLC &nbsp;|&nbsp; <a href="https://aegismgk.com/privacy/">Privacy Policy</a> &nbsp;|&nbsp; <a href="https://aegismgk.com/sbcc-terms/">Terms of Service</a> &nbsp;|&nbsp; <a href="mailto:admin@aegismgk.com">admin@aegismgk.com</a></p>
+  </footer>
+
+</body>
+</html>
